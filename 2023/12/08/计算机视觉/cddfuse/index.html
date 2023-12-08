@@ -43,7 +43,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-12-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-12-08T15:52:32.516Z">
+<meta property="article:modified_time" content="2023-12-08T16:05:53.109Z">
 <meta property="article:author" content="Alrik">
 <meta property="article:tag" content="cddfuse图像融合">
 <meta name="twitter:card" content="summary">
@@ -1758,7 +1758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1702051384513),
+    lastupdate: new Date(1702051709429),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","text"],
       for_post: ["toc"],
@@ -2773,12 +2773,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p>名称： CDDFuse: Correlation-Driven Dual-Branch Feature Decomposition for Multi-Modality Image Fusion (CDDFuse：用于多模态图像融合的相关驱动双分支特征分解)<br>作者：Zixiang Zhao (赵子祥)<br>阅读时间：2023-10<br>关键词：cddfuse,Multi-modality (MM) image fusion,restormer,transformer-CNN </p>
+    <h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><p>名称： CDDFuse: Correlation-Driven Dual-Branch Feature Decomposition for Multi-Modality Image Fusion (CDDFuse：用于多模态图像融合的相关驱动双分支特征分解)<br>作者：Zixiang Zhao (赵子祥)<br>关键词：cddfuse,Multi-modality (MM) image fusion,restormer,transformer-CNN </p>
 <h2 id="摘要提取"><a href="#摘要提取" class="headerlink" title="摘要提取"></a>摘要提取</h2><p>多模态（MM）图像融合旨在渲染融合图像，保持不同模态的优点，例如功能突出和详细纹理。为了应对跨模态特征建模和分解所需的模态特定和模态共享特征的挑战，我们提出了一种新颖的相关驱动特征分解融合（CDDFuse）网络。首先，CDDFuse 使用 Restormer 块来提取跨模态浅层特征。然后，我们引入了双分支 Transformer-CNN 特征提取器，其中 Lite Transformer (LT) 块利用远程注意力来处理低频全局特征，而可逆神经网络 (INN) 块则专注于提取高频局部信息。进一步提出了相关驱动损失，基于嵌入信息使低频特征相关，而高频特征不相关。然后，基于 LT 的全局融合层和基于 INN 的局部融合层输出融合图像。大量的实验表明，我们的 CDDFuse 在多种融合任务中取得了有希望的结果，包括红外 - 可见光图像融合和医学图像融合。我们还表明，CDDFuse 可以在统一的基准测试中提高下游红外 - 可见光语义分割和对象检测的性能。</p>
 <h2 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h2><ul>
 <li>提出了相关驱动特征分解融合（CDDFuse）模型，其中通过双分支编码器实现模态特定和模态共享特征提取，并由解码器重建融合图像</li>
 </ul>
-<h2 id="研究目的"><a href="#研究目的" class="headerlink" title="研究目的"></a>研究目的</h2><h2 id="研究方法"><a href="#研究方法" class="headerlink" title="研究方法"></a>研究方法</h2><ul>
+<h2 id="研究方法"><a href="#研究方法" class="headerlink" title="研究方法"></a>研究方法</h2><ul>
 <li>引入了双分支 Transformer-CNN 特征提取器，其中 Lite Transformer (LT) 块利用远程注意力来处理低频全局特征，而可逆神经网络 (INN) 块则专注于提取高频局部信息</li>
 <li>进一步提出了相关驱动损失，基于嵌入信息使低频特征相关，而高频特征不相关。</li>
 </ul>
@@ -2813,7 +2813,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="Fusion-layer"><a href="#Fusion-layer" class="headerlink" title="Fusion layer"></a>Fusion layer</h4><ul>
 <li>采用 LT 模块和 INN 模块构成基本和细节融合层</li>
 </ul>
-<h3 id="Decoder"><a href="#Decoder" class="headerlink" title="Decoder"></a>Decoder</h3><ul>
+<h4 id="Decoder"><a href="#Decoder" class="headerlink" title="Decoder"></a>Decoder</h4><ul>
 <li>采用 Restomer 块</li>
 <li>在第一训练阶段，重构图像作为第二阶段的输入，在第二训练阶段，输出融合图像</li>
 </ul>
@@ -2844,10 +2844,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-12-08T23:52:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-12-09T00:05:53+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Dec 8, 2023</p>
+    <p>更新于：Dec 9, 2023</p>
   </a>
 </div>
 
@@ -2992,7 +2992,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">基本信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81%E6%8F%90%E5%8F%96"><span class="toc-text">摘要提取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E6%96%B0%E7%82%B9"><span class="toc-text">创新点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E7%9B%AE%E7%9A%84"><span class="toc-text">研究目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95"><span class="toc-text">研究方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E8%BF%87%E7%A8%8B"><span class="toc-text">研究过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#incroduction"><span class="toc-text">incroduction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Related-Work"><span class="toc-text">Related Work</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Method"><span class="toc-text">Method</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Encoder"><span class="toc-text">Encoder</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Fusion-layer"><span class="toc-text">Fusion layer</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Decoder"><span class="toc-text">Decoder</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Train"><span class="toc-text">Train</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">基本信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81%E6%8F%90%E5%8F%96"><span class="toc-text">摘要提取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E6%96%B0%E7%82%B9"><span class="toc-text">创新点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95"><span class="toc-text">研究方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E8%BF%87%E7%A8%8B"><span class="toc-text">研究过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#incroduction"><span class="toc-text">incroduction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Related-Work"><span class="toc-text">Related Work</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Method"><span class="toc-text">Method</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Encoder"><span class="toc-text">Encoder</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Fusion-layer"><span class="toc-text">Fusion layer</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Decoder"><span class="toc-text">Decoder</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Train"><span class="toc-text">Train</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4204,7 +4204,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Alrik Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Alrik","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is Alrik blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Alrik Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/计算机视觉/","name":"计算机视觉"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/12/08/计算机视觉/cddfuse/","name":"cddfuse"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Alrik Blog","url":"http://example.com/","keywords":null,"description":"this is Alrik blog","author":{"@type":"Person","name":"Alrik","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is Alrik blog"},"publisher":{"@type":"Organization","name":"Alrik Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"cddfuse","description":"cddfuse论文个人阅读学习","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/12/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/cddfuse/"},"author":{"@type":"Person","name":"Alrik","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Alrik Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/12/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/cddfuse/","wordCount":0,"datePublished":"2023-12-07T16:00:00.000Z","dateModified":"2023-12-08T15:52:32.516Z","articleSection":"计算机视觉","keywords":"cddfuse图像融合","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Alrik Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Alrik","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"this is Alrik blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Alrik Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/计算机视觉/","name":"计算机视觉"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/12/08/计算机视觉/cddfuse/","name":"cddfuse"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Alrik Blog","url":"http://example.com/","keywords":null,"description":"this is Alrik blog","author":{"@type":"Person","name":"Alrik","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"this is Alrik blog"},"publisher":{"@type":"Organization","name":"Alrik Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"cddfuse","description":"cddfuse论文个人阅读学习","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/12/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/cddfuse/"},"author":{"@type":"Person","name":"Alrik","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Alrik Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/12/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/cddfuse/","wordCount":0,"datePublished":"2023-12-07T16:00:00.000Z","dateModified":"2023-12-08T16:05:53.109Z","articleSection":"计算机视觉","keywords":"cddfuse图像融合","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
