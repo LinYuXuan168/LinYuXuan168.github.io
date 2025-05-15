@@ -11,6 +11,8 @@ music:
  type: playlist        # song, playlist, album, search, artist
  id: 8109052701      # song id / playlist id / album id / search keyword
 author: 林宇轩
+password: yuxuan
+message: enter the passkey
 ---
 
 hexo clean
@@ -24,3 +26,10 @@ hexo g
 hexo clean && hexo g && hexo d
 
 第一次发布测试
+
+密码发布测试
+
+密码测试第二次
+
+debug模式测试
+

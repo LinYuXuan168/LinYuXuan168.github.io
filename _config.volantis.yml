@@ -96,7 +96,8 @@ cover:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: https://s2.loli.net/2023/12/07/s2wylPKdGImHX3L.png
+  background: https://s3.bmp.ovh/imgs/2025/05/15/e3bba60e476b2286.jpg
+  # background: https://s2.loli.net/2023/12/07/s2wylPKdGImHX3L.png
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo: #https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: 'Alrik'
@@ -307,7 +308,8 @@ plugins:
     duration: 10000       # Duration (ms)
     fade: 1000            # fade duration (ms) (Not more than 1500)
     images:               # For personal use only. At your own risk if used for commercial purposes !!!
-      - https://s2.loli.net/2023/12/07/s2wylPKdGImHX3L.png
+      # - https://s2.loli.net/2023/12/07/s2wylPKdGImHX3L.png
+      - https://s3.bmp.ovh/imgs/2025/05/15/e3bba60e476b2286.jpg
 
   # 暗黑模式 darkmode
   # 开关按钮：在 navbar.menu 中添加：
